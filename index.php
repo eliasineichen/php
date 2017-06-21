@@ -150,10 +150,13 @@
             irgendetwas();
 
             // Operations
+            $z = "3";
             $x = 3;
             $y = 15;
 
-            echo "<h1>Operations:</h1>";
+            echo "<h1>Operators:</h1>";
+
+            echo "<h3>Arithmetic Operators</h3>";
 
             echo "Plus (+): ", $x + $y, "<br>";
             echo "Minus (-): ", $y - $x, "<br>";
@@ -161,6 +164,23 @@
             echo "Geteilt (/): ", $y / $x, "<br>";
             echo "Modulo (%): ", $y % $x, "<br>";
             echo "Hoch (**): ", $x ** $y, "<br>";
+
+            echo "<h3>Comparison Operators</h3>";
+
+            echo "Equal (==): ", var_dump($x == $z), "<br>";
+            echo "Identical (===): ", var_dump($x === $z), "<br>";
+            echo "Not Equal (!=): ", var_dump($x != $z), "<br>";
+            echo "Not Identical (!==): ", var_dump($x !== $z), "<br>";
+            echo "Greater than (>): ", var_dump($x > $y), "<br>";
+            echo "Less than (<): ", var_dump($x < $y), "<br>";
+            echo "Greater than or equal to (>=): ", var_dump($x >= $y), "<br>";
+            echo "Less than or equal to (<=): ", var_dump($x <= $y), "<br>";
+            
+            echo "<h3>Logical Operators</h3>";
+
+            echo "And (&&): ", var_dump(true && false), "<br>";
+            echo "Or (||): ", var_dump(true || false), "<br>";
+            echo "Not (!): ", var_dump(!true), "<br>";
         ?>
     </body>
 </html>
