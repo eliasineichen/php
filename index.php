@@ -149,7 +149,7 @@
 
             irgendetwas();
 
-            // Operations
+            // Operators
             $z = "3";
             $x = 3;
             $y = 15;
@@ -181,6 +181,72 @@
             echo "And (&&): ", var_dump(true && false), "<br>";
             echo "Or (||): ", var_dump(true || false), "<br>";
             echo "Not (!): ", var_dump(!true), "<br>";
+
+            // Conditional Statements
+            $true = true;
+            $false = false;
+
+
+            echo "<h1>Conditional Statements:</h1>";
+
+            echo "<h3>If</h3>";
+
+            if ($true) { 
+                echo "If (x == true) {<br>
+                    <i>Wird ausgeführt wenn Bedingung true ist.</i><br>
+                }";
+            }
+            
+            echo "<h3>Else</h3>";
+
+            if ($false) { 
+            } else {
+                echo "If (x == true) {<br>
+                } else {<br>
+                    <i>Wird ausgeführt wenn Bedingung false ist.</i><br>
+                }";
+            }
+
+            echo "<h3>Elseif</h3>";
+
+            if ($false) { 
+            } elseif ($true) {
+                echo "If (x == true) {<br>
+                } elseif (y == true) {<br>
+                    <i>Wird ausgeführt wenn erste Bedingung false und zweite Bedingung true ist.</i><br>
+                }";
+            }
+
+            echo "<h3>Switch</h3>";
+
+            echo "switch (farbe) {                                                              <br>
+                case 'rot':             // if(farbe == rot)                                     <br>
+                    break;                                                                      <br>
+                case 'gruen':           // if(farbe == gruen)                                   <br>                 
+                    break;                                                                      <br>
+                case 'blau':            // if(farbe == blau)                                    <br>
+                    break;                                                                      <br>
+                default:                // if(farbe != rot && farbe != gruen && farbe != blau)  <br>
+                    brek;                                                                       <br>
+            }<br><br>";
+
+            echo "Ergebniss: <br>";
+            
+            $farbe = "rot";
+
+            switch ($farbe) {
+                case "rot":
+                    echo "Farbe: Rot";
+                    break;
+                case "gruen":
+                    echo "Farbe: Grün";
+                    break;
+                case "blau":
+                    echo "Farbe: Blau";
+                    break;
+                default:
+                    echo "Die Standardfarbe ist Schwarz/Weiss.";
+            }
         ?>
     </body>
 </html>
