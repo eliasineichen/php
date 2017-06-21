@@ -231,7 +231,7 @@
             }<br><br>";
 
             echo "Ergebniss: <br>";
-            
+
             $farbe = "rot";
 
             switch ($farbe) {
@@ -246,6 +246,70 @@
                     break;
                 default:
                     echo "Die Standardfarbe ist Schwarz/Weiss.";
+            }
+
+            // Loops
+            echo "<h1>Loops</h1>";
+            
+            echo "<h3>While</h3>";
+
+            echo "x = 1;<br> 
+            while(x <= 5) { <br>
+                echo 'The number is: x'; <br>
+                x++;<br>
+            } <br><br>";
+
+            echo "Ergebniss: <br>";
+
+            $x = 1; 
+
+            while($x <= 5) {
+                echo "The number is: $x <br>";
+                $x++;
+            } 
+
+            echo "<h3>Do...While</h3>";
+
+            echo "x = 1;<br> 
+            do { <br>
+                echo 'The number is: x'; <br>
+                x++;<br>
+            } <br>
+            while(x > 5) <br><br>";
+
+            echo "Ergebniss: <br>";
+            
+            $x = 1; 
+
+            do {
+                echo "The number is: $x <br>";
+                $x++;
+            } while ($x > 5);
+
+            echo "<h3>For</h3>";
+
+            echo "for (x = 0; x < 3; x++) {<br>
+                echo 'X ist: x';<br>
+            }<br><br>";
+
+            echo "Ergebniss: <br>";
+
+            for ($x = 0; $x < 3; $x++) {
+                echo "X ist: $x <br>";
+            }
+
+            echo "<h3>Foreach</h3>";
+
+            echo "foreach (farbe as wert) {<br>
+                echo 'Farbe ist: wert';<br>
+            }<br><br>";
+
+            echo "Ergebniss: <br>";
+
+            $farbe = array("rot", "grün", "gelb", "blau");
+
+            foreach ($farbe as $wert) {
+                echo "Farbe ist: $wert <br>";
             }
         ?>
     </body>
