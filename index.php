@@ -148,6 +148,19 @@
             }
 
             irgendetwas();
+
+            // Operations
+            $x = 3;
+            $y = 15;
+
+            echo "<h1>Operations:</h1>";
+
+            echo "Plus (+): ", $x + $y, "<br>";
+            echo "Minus (-): ", $y - $x, "<br>";
+            echo "Mal (*): ", $x * $y, "<br>";
+            echo "Geteilt (/): ", $y / $x, "<br>";
+            echo "Modulo (%): ", $y % $x, "<br>";
+            echo "Hoch (**): ", $x ** $y, "<br>";
         ?>
     </body>
 </html>
