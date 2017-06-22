@@ -396,6 +396,33 @@
             }
 
             echo "Die Summe von 5 und 3 ist: ", summe(5, 3);
+
+            echo "<h1>Arrays:</h1>";
+
+            echo "<h3>Indexed arrays</h3>";
+
+            $motorraeder = array("Honda", "Yamaha", "Suzuki", "Kawasaki", "BMW");
+
+            echo "Meine Lieblingsmotorräder sind: " . $motorraeder[0] . ", " . $motorraeder[1] . ", " . $motorraeder[2] . ", " . $motorraeder[3] . " und " . $motorraeder[4] . ".";
+
+            echo "<br><br><b>Count-Function</b><br><br>";
+
+            echo "Die Länge des Arrays ist: ", count($motorraeder);
+
+            echo "<h3>Associative Arrays</h3>";
+
+            $alter = array("Peter"=>35, "Max"=>63, "Josh"=> 25);
+
+            $alter["Ben"] = 32;
+
+            echo "Peter ist ", $alter["Peter"], " Jahre alt.<br>";
+            echo "Ben ist ", $alter["Ben"], " Jahre alt.<br><br>";
+
+            echo "<b>Loop</b><br><br>";
+
+            foreach($alter as $key => $value) {
+                echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
         ?>
     </body>
 </html>
