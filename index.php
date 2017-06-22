@@ -311,6 +311,91 @@
             foreach ($farbe as $wert) {
                 echo "Farbe ist: $wert <br>";
             }
+
+            // Funktionen
+
+            echo "<h1>Funktionen:</h1>";
+
+            echo "function <i>name</i> () {<br>
+                <i>auzufürender code</i> <br>
+            }<br><br>
+            Function-Call:<br>
+            name();<br>
+            <br><br>";
+
+            echo "Ergebniss: <br>";
+
+            function name () {
+                echo "Funktion <i>name</i> wurde aufgerufen.";
+            }
+
+            name();
+
+            echo "<h3>Parameter:</h3>";
+
+            echo "function gibFarbe (<i>parameter</i>) {<br>
+                echo 'Die Farbe ist: parameter' <br>
+            }<br><br>";
+
+            echo "Ergebniss: <br>";
+
+            function gibFarbe ($param) {
+                echo "Die Farbe ist: $param!";
+            }
+
+            gibFarbe("grün");
+
+            echo "<h3>Parameter-Typ:</h3>";
+
+            echo "function addiere5 (<i>parameter = int</i>) {<br>
+                echo parameter + 5<br>
+            }<br><br>";
+
+            echo "Ergebniss (Mit <i>3</i> als Parameter):<br>";
+
+            function addiere5 (int $param) {
+                echo $param + 5, "<br><br>";
+            }
+
+            addiere5(3);
+
+            echo "Ergebniss (Mit <i>'3'</i> als Parameter):<br>";
+
+            echo "<br><b>Fatal error:</b> Uncaught TypeError: Argument 1 passed to addiere5() must be of the type integer, string given, 
+            called in C:\xampp\htdocs\PHP\index.php on line 364 and defined in C:\xampp\htdocs\PHP\index.php:356 Stack trace: 
+            #0 C:\xampp\htdocs\PHP\index.php(364): addiere5('ASDF') #1 {main} thrown in <b>C:\xampp\htdocs\PHP\index.php</b> on line <b>356</b>";
+
+            echo "<h3>Standard-Wert:</h3>";
+
+            echo "function gibHund (<i>parameter = 'KEINE RASSE ÜBERGEBEN'</i>) {<br>
+                echo 'Die Rasse ist: parameter' <br>
+            }<br><br>";
+
+            echo "Ergebniss mit 'Chihuahua' als Parameter: <br>";
+
+            function gibHund ($param = "KEINE RASSE ÜBERGEBEN") {
+                echo "Die Rasse ist: $param! <br><br>";
+            }
+
+            gibHund("Chihuahua");
+            
+            echo "Ergebniss ohne Parameter: <br>";
+
+            gibHund();
+
+            echo "<h3>Rückgabewert</h3>";
+
+            echo "function summe (x, y) {<br>
+                z = x + y;<br>
+                return z;<br>
+            }<br><br>";
+
+            function summe ($x, $y) {
+                $z = $x + $y;
+                return $z;
+            }
+
+            echo "Die Summe von 5 und 3 ist: ", summe(5, 3);
         ?>
     </body>
 </html>
