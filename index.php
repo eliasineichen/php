@@ -423,6 +423,56 @@
             foreach($alter as $key => $value) {
                 echo $key, " ist ", $value, " Jahre alt.<br>";
             }
+
+            echo "<h1>Sort Functions for Arrays:</h1>";
+
+            echo "<h3>Aufsteigend ----- sort()</h3>";
+            
+            sort($motorraeder);
+
+            foreach($motorraeder as $moto) {
+                echo $moto, "<br>";
+            }
+
+            echo "<h3>Absteigend ----- rsort()</h3>";
+            
+            rsort($motorraeder);
+
+            foreach($motorraeder as $moto) {
+                echo $moto, "<br>";
+            }
+            
+            echo "<h3>Aufsteigend nach KEY ----- ksort()</h3>";
+            
+            ksort($alter);
+
+            foreach($alter as $key => $value) {
+                echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
+            
+            echo "<h3>Absteigend nach KEY ----- krsort()</h3>";
+            
+            krsort($alter);
+
+            foreach($alter as $key => $value) {
+                echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
+                        
+            echo "<h3>Aufsteigend nach VALUE ----- asort()</h3>";
+            
+            asort($alter);
+
+            foreach($alter as $key => $value) {
+                echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
+            
+            echo "<h3>Absteigend nach VALUE ----- arsort()</h3>";
+            
+            arsort($alter);
+
+            foreach($alter as $key => $value) {
+                echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
         ?>
     </body>
 </html>
