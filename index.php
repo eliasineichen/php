@@ -397,6 +397,8 @@
 
             echo "Die Summe von 5 und 3 ist: ", summe(5, 3);
 
+            // ARRAYS
+
             echo "<h1>Arrays:</h1>";
 
             echo "<h3>Indexed arrays</h3>";
@@ -423,6 +425,8 @@
             foreach($alter as $key => $value) {
                 echo $key, " ist ", $value, " Jahre alt.<br>";
             }
+
+            // ARRAYS SORTIEREN
 
             echo "<h1>Sort Functions for Arrays:</h1>";
 
@@ -472,6 +476,86 @@
 
             foreach($alter as $key => $value) {
                 echo $key, " ist ", $value, " Jahre alt.<br>";
+            }
+
+            // SUPERGLOBALS
+
+            echo "<h1>Superglobals</h1>";
+
+            echo '<h3>$GLOBALS</h3>';
+
+            $x = 5;
+            $y = 3;
+
+            function plusRechnen () {
+                $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+            }
+
+            plusRechnen();
+
+            echo "Die Globale-Variable 'Z' ist: ", $GLOBALS['z'];
+
+            echo '<h3>$_SERVER</h3>';
+
+            echo '<b>PHP_SELFT (Pfad des aktuellen Files)</b><br>';
+            echo $_SERVER['PHP_SELF'], '<br><br>';
+            
+            echo '<b>SERVER_NAME (Name des Servers)</b><br>';
+            echo $_SERVER['SERVER_NAME'], '<br><br>';
+                        
+            echo '<b>HTTP_HOST (Http Host)</b><br>';
+            echo $_SERVER['HTTP_HOST'], '<br><br>';
+                        
+            echo '<b>HTTP_USER_AGENT (Browser)</b><br>';
+            echo $_SERVER['HTTP_USER_AGENT'], '<br><br>';
+                                    
+            echo '<b>SCRIPT_NAME (Name des Scripts)</b><br>';
+            echo $_SERVER['SCRIPT_NAME'], '<br><br>';
+
+            echo '<h3>$_REQUEST</h3>';
+        ?>
+
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            Name: <input type="text" name="vorname">
+            <input type="submit">
+        </form>
+
+        <br>
+
+        <?php 
+
+            echo '<b>$_REQUEST (Allgemeine Requests)</b><br>';
+
+            if($_SERVER["REQUEST_METHOD"] == "POST") {
+                if ($_REQUEST['vorname']) {
+                    echo $_REQUEST['vorname'];
+                } else {
+                    echo "Kein Name eingegeben.";
+                }
+            }
+
+            echo '<br><br><b>$_POST (Nur POST-Requests)</b><br> ';
+            
+            if($_SERVER["REQUEST_METHOD"] == "POST") {
+                if ($_POST['vorname']) {
+                    echo $_POST['vorname'];
+                } else {
+                    echo "Kein Name eingegeben.";
+                }
+            }
+        ?>
+
+        <br>
+        <br>
+        <b>$_GET</b>
+        <br>
+
+        <a href="http://localhost:8080/php?name=Ineichen&vorname=Elias">Klick mich!</a>
+        <br><br>
+        
+        <?php
+            if ($_GET['name'] && $_GET['vorname']) {
+                echo "Ich heisse " . $_GET['name'] . $_GET['vorname'];
             }
         ?>
     </body>
