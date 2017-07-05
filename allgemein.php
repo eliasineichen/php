@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>PHP</title>
+        <title>Allgemein</title>
     
     </head>
     <body>
